@@ -1,1 +1,51 @@
+Create python virtual environment within Anaconda installation Virtual Environment
 
+# Conda to know available list of environment
+
+conda info -e
+
+# Conda create environment
+
+conda create -n mypy3env python==3.6.8
+
+# Also can set local envirnment path can be specified, set ur workspace directly
+
+conda create --prefix ./envs jupyterlab=0.35 matplotlib=3.1 numpy=1.16
+
+# Activate the environment
+
+source activate mypy3env   ##### Linux and macOS
+
+conda activate mypy3env   ##### for conda 4.6 and later versions
+
+ 
+
+# Now you want a virtual environment in your local workspace folder for deployment
+
+# Install virtualenv package
+
+pip install virtualenv
+
+# Create virtualenv pointing the python application file, venv has got created
+
+virtualenv .venv -p C:\Anaconda3\envs\mypy3env\python.exe
+
+# Activate a local virtual environment
+
+.venv\Scripts\activate
+
+ 
+
+other imp command:
+
+conda install python=3.7 codecov
+
+ 
+
+eg. prefix: /Users/username/anaconda3/envs/env-name or /Users/username/workspace/project/env-name
+
+https://github.com/conda/conda
+
+https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+https://uoa-eresearch.github.io/eresearch-cookbook/recipe/2014/11/20/conda/
